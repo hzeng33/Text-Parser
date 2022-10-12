@@ -1,0 +1,36 @@
+- create two tables:
+CREATE TABLE source(
+source_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+source_name VARCHAR(40) NOT NULL,
+source_url VARCHAR(255) NOT NULL,
+source_begin VARCHAR(50) NULL,
+source_end VARCHAR(50) NULL,
+parsed_dtm TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE occurrence (
+  occurrence_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  source_id INT NOT NULL,
+  word VARCHAR(30) NOT NULL,
+  freq INT NOT NULL,
+  CONSTRAINT `fk_occurrence_source`
+    FOREIGN KEY (source_id) REFERENCES source(source_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+- Operations in source table:
+SELECT source_name FROM source INNER JOIN occurrence ON source.source_id = occurrence.source_id LIMIT 1;
+
+delete from source where source_id = '1';
+
+select * from source;
+
+drop table source;
+
+- Operations in occurrence table:
+SELECT word, freq FROM occurrence INNER JOIN source ON occurrence.source_id = source.source_id ORDER BY freq DESC;
+
+select * from occurrence;
+
+drop table occurrence;

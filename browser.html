@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Information Page</title>
+</head>
+<body>
+  <div id="Navigator">
+      <div id="appName"></div>
+      <script>
+          document.getElementById("appName").innerHTML = "navigator.appName is " + navigator.appName;
+      </script>
+      <div id="product"></div>
+      <script>
+          document.getElementById("product").innerHTML = "navigator.product is " + navigator.product;
+      </script>
+      <div id="appVersion"></div>
+      <script>
+          document.getElementById("appVersion").innerHTML = "navigator.appVersion is " + navigator.appVersion;
+      </script>
+      <div id="userAgent"></div>
+      <script>
+          document.getElementById("userAgent").innerHTML = "navigator.userAgent is " + navigator.userAgent;
+      </script>
+      <div id="platform"></div>
+      <script>
+          document.getElementById("platform").innerHTML = "navigator.platform is " + navigator.platform;
+      </script>
+      <div id="language"></div>
+      <script>
+          document.getElementById("language").innerHTML = "navigator.language is " + navigator.language;
+      </script>
+  </div>
+
+  <div id="Window">
+      <div id="innerHeight"></div>
+      <script>
+          document.getElementById("innerHeight").innerHTML = "Browser inner window height: " + window.innerHeight + "px";
+      </script>
+      <div id="innerWidth"></div>
+      <script>
+          document.getElementById("innerWidth").innerHTML = "Browser inner window width: " + window.innerWidth + "px";
+      </script>
+  </div>
+
+  <div id="Screen">
+      <div id="width"></div>
+      <script>
+          document.getElementById("width").innerHTML = "Screen width is " + screen.width;
+      </script>
+      <div id="height"></div>
+      <script>
+          document.getElementById("height").innerHTML = "Screen height is " + screen.height;
+      </script>
+      <div id="availWidth"></div>
+      <script>
+          document.getElementById("availWidth").innerHTML = "Available screen width is " + screen.availWidth;
+      </script>
+      <div id="availHeight"></div>
+      <script>
+          document.getElementById("availHeight").innerHTML = "Available screen height is " + screen.availHeight;
+      </script>
+      <div id="colorDepth"></div>
+      <script>
+          document.getElementById("colorDepth").innerHTML = "Screen color depth is " + screen.colorDepth;
+      </script>
+      <div id="pixelDepth"></div>
+      <script>
+          document.getElementById("pixelDepth").innerHTML = "Screen pixel depth is " + screen.pixelDepth;
+      </script>
+  </div>
+
+  <div id="Location">
+      <div id="href"></div>
+      <script>
+          document.getElementById("href").innerHTML = "The full URL of this page is:<br> " + window.location.href;
+      </script>
+      <div id="hostname"></div>
+      <script>
+          document.getElementById("hostname").innerHTML = "Page hostname is: " + window.location.hostname;
+      </script>
+      <div id="pathname"></div>
+      <script>
+          document.getElementById("pathname").innerHTML = "Page path is:  " + window.location.pathname;
+      </script>
+      <div id="protocol"></div>
+      <script>
+          document.getElementById("protocol").innerHTML = "The page protocol is: " + window.location.protocol;
+      </script>
+  </div>
+
+  <div id="Geolocation">
+      <script>
+          var x = document.getElementById("Geolocation");
+          function getLocation(){
+              if(navigator.geolocation){
+                  navigator.geolocation.getCurrentPosition(showPosition);
+              } else {
+                  x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+          }
+
+          function showPosition(position){
+              x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+          }
+      </script>
+  </div>
+
+</body>
+</html>

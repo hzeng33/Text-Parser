@@ -1,0 +1,28 @@
+<DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Web-Based Text Parser</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+        </head>
+        <body>
+            <section class="form">
+                <form action="parse.php" method="post">
+                    <p>Source Name:</p>
+                    <p><input type="text" name="source_name" required="true"/></p><br>
+        
+                    <p>Source URL:</p>
+                    <p><input type="text" name="source_url" required="true"/></p><br>
+        
+                    <p>Begin (Optional):</p>
+                    <p><input type="text" name="source_begin"/></p><br>
+        
+                    <p>End (Optional):</p>
+                    <p><input type="text" name="source_end"/></p><br>
+        
+                    <p><input type="submit" value="Parse"/></p>
+        
+                </form>
+            </section>
+        </body>
+    </html>
