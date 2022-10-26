@@ -17,9 +17,6 @@ Step 1. In my MySQL database on the CS Dept. server, created these two tables, a
    * source_id int not null foreign key references source(source_id)
    * word varchar(30) not null
    * freq int not null
-
-
-
    
 Step 2. Created an HTML based parse screen with at least the following elements
  * Header with an appropriate header message
@@ -56,4 +53,4 @@ Step 5. Created a PHP page that generated the HTML with an appropriate page head
 
 There was an issue that some words happened to appear twice in the table, so it is welcomed to contribute to fix the bugs in the project.
 
- &copy; 2022 by Hannah Zeng. This is a personal project and any illegal copies of the project without noticing the author is prohitbitted!
+ &copy; 2022 by Hannah Zeng. This is a personal project and any illegal copies or uses of the project without noticing the author is prohitbitted!
