@@ -1,23 +1,19 @@
 # Web-Based-Text-Parser
 This was a course project when taking CS355 at CUNY Queens College. A web-based parser of literary texts that also reports on the word frequencies of the texts being parsed. This has applications in general, but especially to the rising field known as "Digital Humanities"
 
-It was deployed on the CS Dept server (Venus/Mars) at http://venus.cs.qc.cuny.edu/~zeha6333/cs355/ or another publicly accessible server with free or paid hosting. 
+It was deployed on the CS Dept server (Venus/Mars) at http://venus.cs.qc.cuny.edu/~zeha6333/cs355/ or another publicly accessible server with free or paid hosting. (When going in the server website, navigate to the menu item "Project" then select "Parser")
 
-Step 1. In my MySQL database on the CS Dept. server, created these two tables, and the respective columns and constraints: 
-  - source
-    * source_id int auto_increment primary key not null
-    * source_name varchar(40) not null
-    * source_url varchar(255) not null
-    * source_begin varchar(50) null
-    * source_end varchar(50) null
-    * parsed_dtm timestamp default current_timestamp
-         
- - occurrence
-   * occurrence_id int auto_increment primary key not null
-   * source_id int not null foreign key references source(source_id)
-   * word varchar(30) not null
-   * freq int not null
+Step 1. In my MySQL database on the CS Dept. server, created two tables, and the respective columns and constraints: 
+| source                                              | occurrence                                                      |
+| ----------------------------------------------------|:---------------------------------------------------------------:| 
+| source_id int auto_increment primary key not null   | occurrence_id int auto_increment primary key not null           |
+| source_name varchar(40) not null                    | source_id int not null foreign key references source(source_id) |   
+| source_url varchar(255) not null                    | word varchar(30) not null                                       |
+| source_begin varchar(50) null                       | freq int not null                                               |
+| source_end varchar(50) null                         |                                                                 |
+| parsed_dtm timestamp default current_timestamp      |                                                                 |
    
+ 
 Step 2. Created an HTML based parse screen with at least the following elements
  * Header with an appropriate header message
  * Caption and text box for "Source Name"
