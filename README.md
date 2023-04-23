@@ -1,5 +1,5 @@
 # Web-Based-Text-Parser
-This was a course project when taking CS355 at CUNY Queens College. A web-based parser of literary texts that also reports on the word frequencies of the texts being parsed. This has applications in general, but especially to the rising field known as "Digital Humanities"
+This was a course project when taking CS355 at CUNY Queens College. A web-based parser of literary texts that will report on the word frequencies of the texts being parsed. This has applications in general, but especially to the rising field known as "Digital Humanities"
 
 It was deployed on the CS Dept server (Venus/Mars) at https://venus.cs.qc.cuny.edu/~zeha6333/cs355/parse.html or another publicly accessible server with free or paid hosting. (When going in the server website, navigate to the menu item "Project" then select "Parser")
 
